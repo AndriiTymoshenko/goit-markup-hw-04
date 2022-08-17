@@ -188,11 +188,16 @@ header {
 /* hero */
 
 .hero {
+  background-image: url(./images/main/hero.jpg);
   padding-top: 200px;
   padding-bottom: 200px;
 
   text-align: center;
   background-color: var(--footer-bg-color);
+}
+
+.bg-image {
+  background-image: url(./images/main/hero.jpg);
 }
 
 .button {
