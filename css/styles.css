@@ -314,6 +314,50 @@ img {
   color: var(--title-text-color);
 }
 
+.features-item-1::before {
+  display: inline-block;
+  content: '';
+  width: 100%;
+  height: 120px;
+  margin-bottom: var(--section-gap);
+  background-image: url(../images/icons/group1.png);
+  background-size: contain;
+  background-position: center;
+}
+
+.features-item-2::before {
+  display: inline-block;
+  content: '';
+  width: 100%;
+  height: 120px;
+  margin-bottom: var(--section-gap);
+  background-image: url(../images/icons/group2.png);
+  background-size: contain;
+  background-position: center;
+}
+
+.features-item-3::before {
+  display: inline-block;
+  content: '';
+  width: 100%;
+  height: 120px;
+  margin-bottom: var(--section-gap);
+  background-image: url(../images/icons/group3.png);
+  background-size: contain;
+  background-position: center;
+}
+
+.features-item-4::before {
+  display: inline-block;
+  content: '';
+  width: 100%;
+  height: 120px;
+  margin-bottom: var(--section-gap);
+  background-image: url(../images/icons/group4.png);
+  background-size: contain;
+  background-position: center;
+}
+
 .product {
   display: flex;
   gap: var(--section-gap);
