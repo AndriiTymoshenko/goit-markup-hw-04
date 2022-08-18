@@ -289,7 +289,7 @@ img {
 
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.17;
+  line-height: calc(42.19 / 36);
   text-align: center;
   color: var(--title-text-color);
 }
@@ -406,6 +406,17 @@ img {
 
 .team {
   gap: var(--section-gap);
+}
+
+/* Our Clients Section */
+
+.clients {
+  display: flex;
+  gap: var(--section-gap);
+}
+
+.clients-item {
+  border: 1px solid #afb1b8;
 }
 
 /* footer customisation */
