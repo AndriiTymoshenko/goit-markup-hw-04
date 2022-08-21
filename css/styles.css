@@ -12,7 +12,9 @@
   --portfolio-bg-color: #eeeeee;
   --hover-button: #188ce8;
   --overlay: rgba(47, 48, 58, 0.4);
+  --icon-color: #afb1b8
   --container-set-gap: 15px;
+  --icon-bg: rgba(255, 255, 255, 0.1);
   --box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   --section-padding: 94px;
@@ -103,13 +105,13 @@ img {
 
 .logo-header,
 .logo-footer {
-  display: block;
+  display: inline-block;
 
   text-decoration: none;
   font-family: Raleway, cursive;
   font-size: 26px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: calc(35.96 / 26);
 }
 
 .logo-header {
@@ -146,7 +148,7 @@ img {
   text-decoration: none;
   font-family: inherit;
   font-weight: 500;
-  line-height: 1.14;
+  line-height: calc(16.41 / 14);
   letter-spacing: 0.02em;
   color: var(--title-text-color);
 }
@@ -168,30 +170,26 @@ img {
   align-items: center;
 }
 
-.mail::before {
+.mail::before,
+.tel::before {
   content: '';
-  display: inline-block;
+  display: inline-flex;
   margin-right: 10px;
-  width: 16px;
-  height: 12px;
-  background-image: url(../images/icons/envelope.png);
+
   background-size: contain;
   background-position: center;
 }
 
-.mail:hover::before {
-  color: var(--accent-color);
+.mail::before {
+  width: 16px;
+  height: 12px;
+  background-image: url(../images/icons/envelope.svg);
 }
 
 .tel::before {
-  content: '';
-  display: inline-block;
-  margin-right: 10px;
   height: 16px;
   width: 10px;
-  background-image: url(../images/icons/smartphone.png);
-  background-size: contain;
-  background-position: center;
+  background-image: url(../images/icons/smartphone.svg);
 }
 
 .contacts-nav .link {
@@ -201,7 +199,7 @@ img {
   text-decoration: none;
   font-family: inherit;
   font-weight: 500;
-  line-height: 1.14;
+  line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: inherit;
 }
@@ -215,7 +213,8 @@ img {
 /* hero */
 
 .hero {
-  background-image: url(../images/main/overlay.png), url(../images/main/hero.jpg);
+  background-image: linear-gradient(to right, var(--overlay), var(--overlay)),
+    url(../images/main/hero.jpg);
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -237,7 +236,7 @@ img {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: calc(30 / 16);
   letter-spacing: 0.06em;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
@@ -252,7 +251,7 @@ img {
 .hero-title {
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.36;
+  line-height: calc(60 / 44);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--primary-white-color);
@@ -304,58 +303,40 @@ img {
 }
 
 .features-text {
-  line-height: 1.71;
+  line-height: calc(24 / 14);
 }
 
 .features .features-title {
   font-weight: 700;
-  line-height: 1.14;
+  line-height: calc(16.41 / 14);
   text-transform: uppercase;
   color: var(--title-text-color);
 }
 
-.features-item-1::before {
+.features-item::before {
   display: inline-block;
   content: '';
   width: 100%;
   height: 120px;
   margin-bottom: var(--section-gap);
+  background-size: contain;
+  background-position: center;
+}
+
+.features-item:nth-child(1)::before {
   background-image: url(../images/icons/group1.png);
-  background-size: contain;
-  background-position: center;
 }
 
-.features-item-2::before {
-  display: inline-block;
-  content: '';
-  width: 100%;
-  height: 120px;
-  margin-bottom: var(--section-gap);
+.features-item:nth-child(2)::before {
   background-image: url(../images/icons/group2.png);
-  background-size: contain;
-  background-position: center;
 }
 
-.features-item-3::before {
-  display: inline-block;
-  content: '';
-  width: 100%;
-  height: 120px;
-  margin-bottom: var(--section-gap);
+.features-item:nth-child(3)::before {
   background-image: url(../images/icons/group3.png);
-  background-size: contain;
-  background-position: center;
 }
 
-.features-item-4::before {
-  display: inline-block;
-  content: '';
-  width: 100%;
-  height: 120px;
-  margin-bottom: var(--section-gap);
+.features-item:nth-child(4)::before {
   background-image: url(../images/icons/group4.png);
-  background-size: contain;
-  background-position: center;
 }
 
 .product {
@@ -396,16 +377,23 @@ img {
 .member-title {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.19;
+  line-height: calc(18.75 / 16);
   color: var(--title-text-color);
 }
 
 .member-text {
   margin-top: 10px;
+  margin-bottom: 16px;
 }
 
 .team {
   gap: var(--section-gap);
+}
+
+.list .socials {
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
 }
 
 /* Our Clients Section */
@@ -417,6 +405,12 @@ img {
 
 .clients-item {
   border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  border-color: var(--accent-color);
 }
 
 /* footer customisation */
@@ -428,13 +422,13 @@ img {
   background-color: var(--footer-bg-color);
 }
 
-.page-footer address {
-  line-height: 1.71;
-  margin-top: 20px;
+.ft-flex {
+  display: flex;
 }
 
-.footer-text {
-  margin-top: 9px;
+.page-footer address {
+  line-height: calc(24 / 14);
+  margin-top: 20px;
 }
 
 .address-nav {
@@ -461,6 +455,62 @@ img {
   color: var(--accent-color);
 }
 
+/* socials */
+
+.page-footer .socials {
+  display: inline-flex;
+}
+
+.footer-socials {
+  margin-left: 70px;
+}
+
+.socials-text {
+  padding-top: 12px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials .link:hover,
+.socials .link:focus {
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.icon-form {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: var(--icon-bg);
+}
+
+.icon {
+  display: inline-block;
+  padding: 12px;
+}
+
+.soc-icon {
+  width: 20px;
+  height: 20px;
+
+  fill: var(--icon-color);
+}
+
+.soc-icon:hover {
+  fill: var(--primary-white-color);
+  
+}
+
 /* Портфоліо page customisation */
 
 /* Button */
@@ -483,7 +533,7 @@ img {
   font-weight: 500;
   font-size: 16px;
   text-align: center;
-  line-height: 1.63;
+  line-height: calc(26 / 16);
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
   cursor: pointer;
@@ -523,8 +573,13 @@ img {
 .project-title {
   font-weight: 700;
   font-size: 18px;
-  line-height: 2;
+  line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   color: var(--title-text-color);
   margin-bottom: 4px;
+}
+
+.project-text {
+  font-size: 16px;
+  line-height: calc(30 / 16);
 }
