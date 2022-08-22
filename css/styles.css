@@ -176,7 +176,7 @@ img {
   display: inline-flex;
   margin-right: 10px;
 
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
@@ -324,19 +324,19 @@ img {
 }
 
 .features-item:nth-child(1)::before {
-  background-image: url(../images/icons/group1.png);
+  background-image: url(../images/icons/group1.svg);
 }
 
 .features-item:nth-child(2)::before {
-  background-image: url(../images/icons/group2.png);
+  background-image: url(../images/icons/group2.svg);
 }
 
 .features-item:nth-child(3)::before {
-  background-image: url(../images/icons/group3.png);
+  background-image: url(../images/icons/group3.svg);
 }
 
 .features-item:nth-child(4)::before {
-  background-image: url(../images/icons/group4.png);
+  background-image: url(../images/icons/group4.svg);
 }
 
 .product {
@@ -403,7 +403,13 @@ img {
   gap: var(--section-gap);
 }
 
+.client {
+  width: 100%;
+  height: 92px;
+}
+
 .clients-item {
+  width: 170px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
 }
