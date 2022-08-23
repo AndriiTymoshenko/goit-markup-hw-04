@@ -170,32 +170,9 @@ img {
   align-items: center;
 }
 
-.mail::before,
-.tel::before {
-  content: '';
-  display: inline-flex;
-  margin-right: 10px;
-
-  background-size: cover;
-  background-position: center;
-}
-
-.mail::before {
-  width: 16px;
-  height: 12px;
-  background-image: url(../images/icons/envelope.svg);
-}
-
-.tel::before {
-  height: 16px;
-  width: 10px;
-  background-image: url(../images/icons/smartphone.svg);
-}
-
 .contacts-nav .link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-
+  display: flex;
+  align-items: center;
   text-decoration: none;
   font-family: inherit;
   font-weight: 500;
@@ -207,6 +184,23 @@ img {
 .contacts-nav .link:hover,
 .contacts-nav .link:focus {
   color: var(--accent-color);
+  fill: currentColor;
+}
+
+.icon-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+
+  fill: currentColor;
+}
+
+.icon-tel {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+
+  fill: currentColor;
 }
 
 /* main customisation */
@@ -313,30 +307,19 @@ img {
   color: var(--title-text-color);
 }
 
-.features-item::before {
-  display: inline-block;
-  content: '';
-  width: 100%;
+.feature-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
+  background-color: var(--secondary-bg-color);
+}
+
+.icon-features {
+  width: 270px;
   height: 120px;
-  margin-bottom: var(--section-gap);
-  background-size: contain;
-  background-position: center;
-}
-
-.features-item:nth-child(1)::before {
-  background-image: url(../images/icons/group1.svg);
-}
-
-.features-item:nth-child(2)::before {
-  background-image: url(../images/icons/group2.svg);
-}
-
-.features-item:nth-child(3)::before {
-  background-image: url(../images/icons/group3.svg);
-}
-
-.features-item:nth-child(4)::before {
-  background-image: url(../images/icons/group4.svg);
+  margin-bottom: 30px;
 }
 
 .product {
@@ -406,6 +389,8 @@ img {
 .client {
   width: 100%;
   height: 92px;
+
+  fill: var(--icon-color);
 }
 
 .clients-item {
@@ -550,6 +535,7 @@ img {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   border-color: transparent;
+  box-shadow: var(--box-shadow);
 }
 
 /* Portfolio page customisation */
@@ -560,15 +546,10 @@ img {
   flex-wrap: wrap;
 
   gap: var(--section-gap);
-
-  /* margin-right: calc(-1 * var(--section-gap));
-  margin-bottom: calc(-1 * var(--section-gap)); */
 }
 
 .flex-elements {
   width: calc((100% - 60px) / 3);
-  /* margin-right: var(--section-gap);
-  margin-bottom: var(--section-gap); */
   box-shadow: var(--box-shadow);
 }
 
