@@ -307,15 +307,6 @@ img {
   color: var(--title-text-color);
 }
 
-.feature-thumb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 4px;
-  background-color: var(--secondary-bg-color);
-}
-
 .icon-features {
   width: 270px;
   height: 120px;
@@ -339,12 +330,26 @@ img {
 }
 
 .team .link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-color);
+  fill: currentColor;
+  border-radius: 50%;
+
   font-family: inherit;
   text-decoration: none;
   text-align: center;
   font-size: 16px;
-  color: inherit;
   background-color: var(--primary-white-color);
+}
+
+.team .link:hover,
+.team .link:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
 }
 
 .member-card {
@@ -386,22 +391,29 @@ img {
   gap: var(--section-gap);
 }
 
-.client {
-  width: 100%;
-  height: 92px;
-
-  fill: var(--icon-color);
-}
-
-.clients-item {
+.clients .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 170px;
+  height: 92px;
+  fill: currentColor;
+  color: var(--icon-color);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
 }
 
-.clients-item:hover,
-.clients-item:focus {
+.clients .link:hover,
+.clients .link:focus {
+  color: var(--accent-color);
   border-color: var(--accent-color);
+}
+
+.client-icon {
+  width: 106px;
+  height: 60px;
+
+  fill: var(--icon-color);
 }
 
 /* footer customisation */
@@ -415,6 +427,7 @@ img {
 
 .ft-flex {
   display: flex;
+  align-items: baseline;
 }
 
 .page-footer address {
@@ -456,8 +469,12 @@ img {
   margin-left: 70px;
 }
 
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
 .socials-text {
-  padding-top: 12px;
   margin-bottom: 20px;
   font-weight: 700;
   line-height: calc(16 / 14);
@@ -466,40 +483,31 @@ img {
   color: var(--primary-white-color);
 }
 
-.socials {
+.socials-nav {
   display: flex;
   gap: 10px;
 }
 
-.socials .link:hover,
-.socials .link:focus {
-  border-radius: 50%;
-
-  background-color: var(--accent-color);
-}
-
-.icon-form {
+.socials-nav .link {
   width: 44px;
   height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-white-color);
+  fill: currentColor;
   border-radius: 50%;
-
   background-color: var(--icon-bg);
 }
 
-.icon {
-  display: inline-block;
-  padding: 12px;
+.socials-nav .link:hover,
+.socials-nav .link:focus {
+  background-color: var(--accent-color);
 }
 
 .soc-icon {
   width: 20px;
   height: 20px;
-
-  fill: var(--icon-color);
-}
-
-.soc-icon:hover {
-  fill: var(--primary-white-color);
 }
 
 /* Портфоліо page customisation */
