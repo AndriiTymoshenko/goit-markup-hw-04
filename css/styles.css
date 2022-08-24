@@ -405,7 +405,7 @@ img {
 
 .clients .link:hover,
 .clients .link:focus {
-  color: var(--accent-color);
+  fill: var(--accent-color);
   border-color: var(--accent-color);
 }
 
@@ -551,6 +551,8 @@ img {
 .flex-container {
   width: 1170px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 
   gap: var(--section-gap);
@@ -558,7 +560,7 @@ img {
 
 .flex-elements {
   width: calc((100% - 60px) / 3);
-  box-shadow: var(--box-shadow);
+  border: 1px solid var(--portfolio-bg-color);
 }
 
 .project-content {
@@ -577,4 +579,14 @@ img {
 .project-text {
   font-size: 16px;
   line-height: calc(30 / 16);
+}
+
+.flex-container .link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex-container .link:hover,
+.flex-container .link:focus {
+  box-shadow: var(--box-shadow);
 }
