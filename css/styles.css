@@ -15,7 +15,7 @@
   --icon-color: #afb1b8;
   --container-set-gap: 15px;
   --icon-bg: rgba(255, 255, 255, 0.1);
-  --box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  --box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   --section-padding: 94px;
   --section-gap: 30px;
@@ -174,17 +174,18 @@ img {
   display: flex;
   align-items: center;
   text-decoration: none;
+
   font-family: inherit;
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: inherit;
+  fill: currentColor;
 }
 
 .contacts-nav .link:hover,
 .contacts-nav .link:focus {
   color: var(--accent-color);
-  fill: currentColor;
 }
 
 .icon-mail {
@@ -292,6 +293,17 @@ img {
   gap: var(--section-gap);
 }
 
+.features-bg {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  background-color: var(--secondary-bg-color);
+}
+
 .features-title {
   margin-bottom: 10px;
 }
@@ -308,9 +320,8 @@ img {
 }
 
 .icon-features {
-  width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
+  width: 70px;
+  height: 70px;
 }
 
 .product {
@@ -358,6 +369,7 @@ img {
 }
 
 .member {
+  box-shadow: var(--box-shadow);
   border-radius: 8px;
   background-color: var(--primary-white-color);
 }
@@ -412,8 +424,6 @@ img {
 .client-icon {
   width: 106px;
   height: 60px;
-
-  fill: var(--icon-color);
 }
 
 /* footer customisation */
@@ -582,6 +592,7 @@ img {
 }
 
 .flex-container .link {
+  display: inline-block;
   text-decoration: none;
   color: inherit;
 }
